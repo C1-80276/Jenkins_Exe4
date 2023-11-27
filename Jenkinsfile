@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Set KUBECTL_BIN') {
   steps {
-    env KUBECTL_BIN=/home/jenkins/bin/kubectl
+    env KUBECTL_BIN=/usr/local/bin/kubectl
   }
 }
         stage('SCM') {
