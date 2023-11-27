@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
-                git branch: 'master', url: ''
+                git branch: 'master', url: 'https://github.com/C1-80276/Jenkins_Exe4.git'
             }
         }
 
