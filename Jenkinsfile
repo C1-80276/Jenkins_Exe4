@@ -24,6 +24,7 @@ pipeline {
                     sh 'kubectl -- apply -f rs+service.yaml'
                 }
             }
+        }
         stage('Email Notification'){
             steps {emailext body: 'Sucess',
     subject: 'Pipeline for exe6',
