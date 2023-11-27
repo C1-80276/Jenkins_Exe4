@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    sh 'kubectl apply -f rs+service.yaml'
+                    sh 'minikube kubectl -- apply -f rs+service.yaml'
                 }
             }
         }
