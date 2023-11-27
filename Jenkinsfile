@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Set KUBECTL_BIN') {
-  steps {
-    env KUBECTL_BIN=/usr/local/bin/kubectl
-  }
-}
         stage('SCM') {
             steps {
                 git branch: 'master', url: 'https://github.com/C1-80276/Jenkins_Exe4.git'
@@ -26,7 +21,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    sh '${env.KUBECTL_BIN} -- apply -f rs+service.yaml'
+                    sh 'kubectl -- apply -f rs+service.yaml'
                 }
             }
         }
