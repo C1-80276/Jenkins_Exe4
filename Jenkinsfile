@@ -25,9 +25,10 @@ pipeline {
                 }
             }
         stage('Email Notification'){
-            emailext body: 'Sucess',
+            steps {emailext body: 'Sucess',
     subject: 'Pipeline for exe6',
     to: 'chiraag776@gmail.com'
+                }
             }
         }
     }
